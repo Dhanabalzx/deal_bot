@@ -1,0 +1,13 @@
+services:
+  - type: worker
+    name: ajio-flipkart-bot
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python main.py"
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        value: YOUR_BOT_TOKEN
+      - key: TELEGRAM_CHANNEL
+        value: @Offer_Guru_India
+      - key: BITLY_TOKEN
+        value: YOUR_BITLY_TOKEN
